@@ -23,12 +23,11 @@ public class Network {
         initializeLayers();
     }
 
-    void showError(){
-        System.out.println(Arrays.toString(layers[layers.length-1].error));
-    }
-
     void showOutput(){
-        System.out.println(Arrays.toString(layers[layers.length-1].outputs));
+        System.out.println("\nOutputs: ");
+        for (int i = 0; i < Data.outputs.length; i++){
+            System.out.println(Arrays.toString(feedForward(Data.inputs[i])));
+        }
     }
 
     // ------------------------- Network Starts Here --------------------------
